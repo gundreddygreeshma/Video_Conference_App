@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
+
+.nav{
+  height:10vh;
+  width:100vw;
+  display: flex;
+  align-items: center;
+}
+.title-name {
+  padding-left: 2vw;
+}
+
+.description{
+  padding-left: 8vw;
+}
+
+img{
+    height: 400px;
+    width:600px;
+}
+
+.content-left{
+  margin-top: 17vh;
+  /* margin-bottom: 18vh; */
+  height: 40vh;
+  width:40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main{
+    height: 80vh;
+    display: flex;
+    width: 100%;
+}
+
+.details{
+  margin-left: 8.5vw;
+}
+
+.main-images{
+  width:60vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+  span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  span a:before,
+  span a:after{
+    position: absolute;
+    content: "Start Meeting";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  span a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+.footer{
+  height:8vh;
+  margin-left: 2vw;
+  width: 96vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a{
+  color: inherit;
+}
+
+.wrapper {
+  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact{
+  margin-right: 15px;
+}
+
+.icon{
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+ .tooltip {
+  position: absolute;
+  top: 650px;
+  font-size: 14px;
+  background-color: #f0a6a6;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #000000;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: 630px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
+/* .credits{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+p{
+  padding-top: 3px;
+  margin-right: 5px;
+  font-size: 15px;
+} */

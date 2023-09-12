@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #233f58;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    height: 100vh;
+    width:100vw;
+    overflow :hidden;
+ }
+
+.logo{
+    height: 10vh;
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.main{
+    height:80vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopButton{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.end_call{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 9px;
+    margin: 0 3px 0 3px;
+    cursor: pointer;
+}
+.send
+{
+  height:40px;
+  width:40px;
+  background-color: white;
+  cursor:pointer;
+
+}
+.main__controls{
+    display: flex;
+}
+
+.main-left{
+    background-color: #233f58;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__controls{
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__videos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+#video-grid{
+    display: flex;
+  height:100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.options_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    min-height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    min-width: 50px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 204, 255);
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    width: 50px;
+  }
+
+
+.color
+{
+  background-color: white;
+  color:black;
+}
+
+/* ------------------------------------------------------------------------- */
+
+#chat_message{
+    width: 14vw;
+}
+.main__header{
+    height:5vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__chat_window {
+    height: 67vh;
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x: wrap;
+}
+
+.messages{
+    padding-left:5px;
+}
+
+.main__message_container {
+    position: relative;
+    bottom:0px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-top:0px;
+    padding-bottom:25px;
+}
+.main__message_container > input {
+    height: 50px;
+    flex: 1;
+    border-radius: 5px;
+    padding-left: 20px;
+    border: none;
+}
+#chat_message{
+    /* border: 2px solid black; */
+    background-color: rgba(207, 207, 207, 0.747);
+}
+
+video {
+    height: 300px;
+    width: 300px;
+    border-radius: 50px;
+    /* border: 5px solid rgb(0, 10, 0); */
+    object-fit: cover;
+    padding: 8px;
+    object-fit: cover;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+
+
+.main-right {
+    height:80vh;
+    width:20vw;
+    background-color: #ffffff;
+    border-radius:10px;
+    display:none;
+}
+
+.right{
+    display: block;
+    position: absolute;
+    right: 0px;
+    height:80vh;
+    width:20vw;
+    background-color: #ffffff;
+    border-radius:10px;
+
+    transition: all 1s none;
+
+    animation-name: null__display;
+    position: relative;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+}
+
+.fullDisplay{
+    height: 80vh;
+    background-color: #233f58;
+}
+
+.main_area{
+    display: flex;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes null__display {
+    0% {
+        right: -100px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+.message_card{
+    margin: 16px 25px;
+    align-items: center;
+
+}
+.textmsg{
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-left: 25px;
+    /* font-weight: bold; */
+}
+.bold{
+    /* font-weight: bolder; */
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.txtmsg{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif !important;
+}
